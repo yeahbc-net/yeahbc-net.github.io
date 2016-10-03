@@ -1,5 +1,4 @@
 # filename patterns of git ignore files
 /.gitignore
 /log.txt
-test3.txt
 log.txt
