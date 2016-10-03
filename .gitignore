@@ -1,0 +1,3 @@
+# filename patterns of git ignore files
+/log.txt
+test3.txt
