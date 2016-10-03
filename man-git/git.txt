@@ -1,0 +1,5 @@
+1. 指定本地目录用作 Git 版本库目录
+   $mkdir mygit
+2. 通过 git init 命令把此目录变成 Git 可管理的仓库
+   $cd mygit
+   $git init
