@@ -1,29 +1,29 @@
-1. Í¨¹ýÔ­¹Ì¼þwebÒ³ÃæË¢Èë BREED ¹Ì¼þ
-   ¹Ì¼þÏÂÔØµØÖ·£ºhttp://breed.hackpascal.net/breed-qca956x-wdr6500v2.bin
+1. é€šè¿‡åŽŸå›ºä»¶webé¡µé¢åˆ·å…¥ BREED å›ºä»¶
+   å›ºä»¶ä¸‹è½½åœ°å€ï¼šhttp://breed.hackpascal.net/breed-qca956x-wdr6500v2.bin
    
-2. Ë¢»úÍê³Éºó£¬¶Ï¿ªÂ·ÓÉÆ÷µçÔ´£¬°´×¡ RESET¼ü£¬ÖÁµçÔ´Ö¸Ê¾µÆ³öÏÖÈý´ÎÉÁË¸ºó
-   ËÉ¿ª RESET¼ü
+2. åˆ·æœºå®ŒæˆåŽï¼Œæ–­å¼€è·¯ç”±å™¨ç”µæºï¼ŒæŒ‰ä½ RESETé”®ï¼Œè‡³ç”µæºæŒ‡ç¤ºç¯å‡ºçŽ°ä¸‰æ¬¡é—ªçƒåŽ
+   æ¾å¼€ RESETé”®
    
-3. µçÄÔ·ÃÎÊ http://192.168.1.1, ½øÈë BREED ¹Ì¼þË¢»úÒ³Ãæ£¬Ñ¡Ôñ OPENWRT ¹Ì¼þ
-   ¹Ì¼þÏÂÔØµØÖ·£ºhttps://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/openwrt-ar71xx-generic-tl-wdr6500-v2-squashfs-factory.bin
+3. ç”µè„‘è®¿é—® http://192.168.1.1, è¿›å…¥ BREED å›ºä»¶åˆ·æœºé¡µé¢ï¼Œé€‰æ‹© OPENWRT å›ºä»¶
+   å›ºä»¶ä¸‹è½½åœ°å€ï¼šhttps://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/openwrt-ar71xx-generic-tl-wdr6500-v2-squashfs-factory.bin
    
-4. Ë¢»úÍê³Éºó£¬°Îµô WAN¿ÚÍøÏß£¨·ñÔòÏµÍ³µ±»ú£¬ÎÞ·¨½øÐÐºóÐøÅäÖÃ£©£¬ÖØÆôÂ·ÓÉÆ÷
+4. åˆ·æœºå®ŒæˆåŽï¼Œæ‹”æŽ‰ WANå£ç½‘çº¿ï¼ˆå¦åˆ™ç³»ç»Ÿå½“æœºï¼Œæ— æ³•è¿›è¡ŒåŽç»­é…ç½®ï¼‰ï¼Œé‡å¯è·¯ç”±å™¨
 
-5. Ê¹ÓÃ ssh µÇÂ¼ 192.168.1.1£¬ ÓÃ»§Ãû root, ÃÜÂëÎª¿Õ
+5. ä½¿ç”¨ ssh ç™»å½• 192.168.1.1ï¼Œ ç”¨æˆ·å root, å¯†ç ä¸ºç©º
 
-6. ÔÚÖÕ¶ËÅäÖÃ½çÃæÊäÈëÈçÏÂÃüÁî£º
+6. åœ¨ç»ˆç«¯é…ç½®ç•Œé¢è¾“å…¥å¦‚ä¸‹å‘½ä»¤ï¼š
 
    #password root
    #vi /etc/config/network
-    ÕÒµ½ config interface 'wan'
+    æ‰¾åˆ° config interface 'wan'
 	     option ifname 'eth0'
 		 option proto 'pppoe'
 		 option username '133xxxx@163.gd'
 		 option password 'EXDSDSXD'
-	ÒÔÉÏÊÇ²¦ºÅÁ´Â·µÄÐÞ¸Ä·½Ê½£¬DHCP»ò¾²Ì¬µÄÐÞ¸Ä×÷ÏàÓ¦µÄµ÷Õû
+	ä»¥ä¸Šæ˜¯æ‹¨å·é“¾è·¯çš„ä¿®æ”¹æ–¹å¼ï¼ŒDHCPæˆ–é™æ€çš„ä¿®æ”¹ä½œç›¸åº”çš„è°ƒæ•´
 	
-   # ÓÉÓÚÊ¹ÓÃ WAN ¿ÚÁ¬½ÓÁ´Â·»áµ¼ÖÂÂ·ÓÉÆ÷µ±»ú£¬ËùÒÔÄ¿Ç°ÐÞ¸Ä WAN ¿Ú³ÉÒ»¸ö LAN ¿Ú£¬²¢°ÑÄÚÖÃ½»»»»ú»®·ÖÁ½¸ö VLAN À´½â¾ö´ËÎÊÌâ
-    ÐÞ¸Ä /etc/config/network ÎÄ¼þ£¬²Î¿¼ÈçÏÂÅäÖÃ£º
+   # ç”±äºŽä½¿ç”¨ WAN å£è¿žæŽ¥é“¾è·¯ä¼šå¯¼è‡´è·¯ç”±å™¨å½“æœºï¼Œæ‰€ä»¥ç›®å‰ä¿®æ”¹ WAN å£æˆä¸€ä¸ª LAN å£ï¼Œå¹¶æŠŠå†…ç½®äº¤æ¢æœºåˆ’åˆ†ä¸¤ä¸ª VLAN æ¥è§£å†³æ­¤é—®é¢˜
+    ä¿®æ”¹ /etc/config/network æ–‡ä»¶ï¼Œå‚è€ƒå¦‚ä¸‹é…ç½®ï¼š
 	config interface 'lan'
         option type 'bridge'
         option ifname 'eth1.1'
@@ -53,16 +53,16 @@
         option vid '2'
         option ports '0t 1'
    
-7. ÅäÖÃÍê³Éºó£¬ÖØÆôÂ·ÓÉÆ÷£¬²¢ÓÃ ping ¼ì²éÍâÍøµÄÁ¬Í¨ÐÔ
+7. é…ç½®å®ŒæˆåŽï¼Œé‡å¯è·¯ç”±å™¨ï¼Œå¹¶ç”¨ ping æ£€æŸ¥å¤–ç½‘çš„è¿žé€šæ€§
 
-8. È·ÈÏÓÐÍâÍøÁ¬½Óºó£¬Ö´ÐÐÈçÏÂÃüÁî£º
+8. ç¡®è®¤æœ‰å¤–ç½‘è¿žæŽ¥åŽï¼Œæ‰§è¡Œå¦‚ä¸‹å‘½ä»¤ï¼š
    #opkg update
-   #opkg install luci      -- °²×° openwrt luci GUI ÅäÖÃ½çÃæ
-   #opkg install luci-i18n-base-zh-ch  -- luci ÖÐÎÄ°ü°²×°
+   #opkg install luci      -- å®‰è£… openwrt luci GUI é…ç½®ç•Œé¢
+   #opkg install luci-i18n-base-zh-ch  -- luci ä¸­æ–‡åŒ…å®‰è£…
    #/etc/init.d/uhttpd enable 
    #/etc/init.d/uhttpd start
    
-9. ä¯ÀÀÆ÷·ÃÎÊ http://192.168.1.1, ½øÈë openwrt luci ÅäÖÃ½çÃæ
+9. æµè§ˆå™¨è®¿é—® http://192.168.1.1, è¿›å…¥ openwrt luci é…ç½®ç•Œé¢
 
-10. 5G ÆµÂÊÓÐÎÊÌâ£¬ÎÞ·¨¿ªÆô
+10. 5G é¢‘çŽ‡æœ‰é—®é¢˜ï¼Œæ— æ³•å¼€å¯
    
