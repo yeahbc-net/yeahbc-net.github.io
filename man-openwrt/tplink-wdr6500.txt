@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TPLINK-WDR6500-OPENWRT</title>
+</head>
+<body>
 1. 通过原固件web页面刷入 BREED 固件
    固件下载地址：http://breed.hackpascal.net/breed-qca956x-wdr6500v2.bin
    
@@ -15,7 +21,7 @@
 
    #password root
    #vi /etc/config/network
-   找到config interface 'wan'
+   找到 config interface 'wan'
 	       option ifname 'eth0'
 		     option proto 'pppoe'
 		     option username '133xxxx@163.gd'
@@ -23,8 +29,8 @@
 	以上是拨号链路的修改方式，DHCP或静态的修改作相应的调整
 	
    # 由于使用 WAN 口连接链路会导致路由器当机，所以目前修改 WAN 口成一个 LAN 口，并把内置交换机划分两个 VLAN 来解决此问题
-   修改 /etc/config/network 文件，参考如下配置：
-	 config interface 'lan'
+  修改 /etc/config/network 文件，参考如下配置：
+	config interface 'lan'
         option type 'bridge'
         option ifname 'eth1.1'
         option proto 'static'
@@ -32,22 +38,22 @@
         option netmask '255.255.255.0'
         option ip6assign '60'
         
-	 config interface 'wan'
+	config interface 'wan'
         option proto 'dhcp'
         option ifname 'eth1.2'
         
-	 config switch 'eth1'
+	config switch 'eth1'
         option reset '1'
         option enable '1'
         option enable_vlan '1'
         
-	 config switch_vlan
+	config switch_vlan
         option device 'eth1'
         option vlan '1'
         option vid '1'
         option ports '0t 2 3 4'
         
-	 config switch_vlan
+	config switch_vlan
         option device 'eth1'
         option vlan '2'
         option vid '2'
@@ -65,3 +71,5 @@
 9. 浏览器访问 http://192.168.1.1, 进入 openwrt luci 配置界面
 
 10. 5G 频率有问题，无法开启
+</body>
+</html>
