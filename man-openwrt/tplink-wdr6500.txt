@@ -15,15 +15,15 @@
 
    #password root
    #vi /etc/config/network
-    找到 config interface 'wan'
-	     option ifname 'eth0'
-		 option proto 'pppoe'
-		 option username '133xxxx@163.gd'
-		 option password 'EXDSDSXD'
+   找到 config interface 'wan'
+	       option ifname 'eth0'
+		     option proto 'pppoe'
+		     option username '133xxxx@163.gd'
+		     option password 'EXDSDSXD'
 	以上是拨号链路的修改方式，DHCP或静态的修改作相应的调整
 	
    # 由于使用 WAN 口连接链路会导致路由器当机，所以目前修改 WAN 口成一个 LAN 口，并把内置交换机划分两个 VLAN 来解决此问题
-    修改 /etc/config/network 文件，参考如下配置：
+  修改 /etc/config/network 文件，参考如下配置：
 	config interface 'lan'
         option type 'bridge'
         option ifname 'eth1.1'
