@@ -1,3 +1,6 @@
+ul, ol {
+	list-style: none;
+}
 #topbg {
 	background:#CDEAFA;
 	left:0;
@@ -41,4 +44,10 @@
 	height: 35px;
 	width: 100px;
 	text-align: center;
+}
+.navbar .navline {
+	background:#0797e5;
+	display: block;
+	height:35px;
+	width: 1px;
 }
