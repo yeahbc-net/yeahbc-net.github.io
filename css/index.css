@@ -30,10 +30,9 @@
 	width: 950px;
 	height:75px;
 }
-.logo {
-	background:url(../img/logo.png) no-repeat center;
-	display:block;
-	float:left;
-	height:72px;
-	width:200px;
+#navbox {
+	display: block;
+	height: 35px;
+	color:#ffffff;
+	background-color: RGB(96,117,235);
 }
