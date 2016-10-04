@@ -30,3 +30,10 @@
 	width: 950px;
 	height:75px;
 }
+.logo {
+	background:url(../img/logo.png) no-repeat center;
+	display:block;
+	float:left;
+	height:72px;
+	width:200px;
+}
