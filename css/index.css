@@ -36,3 +36,9 @@
 	color:#ffffff;
 	background-color: RGB(96,117,235);
 }
+.navbar li {
+	float:left;
+	height: 35px;
+	width: 100px;
+	text-align: center;
+}
