@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<head>
-  <title>Debian Postgresql</title>
-</head>
-<body>
-<h3>Installation</h3>
+
+Installation
 1. root@local#apt-get install postgresql postgresql-client
 2. root@local#su - postgres        
 3. postgres@local$psql
 4. postgres=#select version();
 
-<h3>Setting remote TCP/IP connection</h3>
+Setting remote TCP/IP connection
 1. root@local#vi /etc/postgresql/9.4/main/pg_hba.conf
    add a line at the bottom of file: 
    host  postgres  postgres  192.168.1.0/24  password
@@ -23,7 +19,7 @@
 7. postgres@local$su -
 8. root@local#/etc/init.d/postgresql restart
 
-<h3>Create new user and database</h3>
+Create new user and database
 1. root@local#adduser pgtest
 2. root@local#su - postgres
 3. postgres@local$/usr/lib/postgresql/9.4/bin/createuser pgtest
@@ -32,5 +28,3 @@
 6. pgtest@local$psql
 7. pgtest@local=>select version();
 
-</body>
-</html>
